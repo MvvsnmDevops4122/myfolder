@@ -9,6 +9,12 @@ fi
 
 echo "proceeding...."
 dnf install nginx123 -y
+if [ $? -ne 0 ]; then
+    echo "Nginx installation is failed"
+    exit 1
+else
+    echo "Nginx installation is success"
+fi          
 echo "proceeding...."
 
 
